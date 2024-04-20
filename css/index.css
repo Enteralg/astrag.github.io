@@ -40,7 +40,7 @@ a {
     background-color: beige;
     color: blue;
 }
-.test {
+.content {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
