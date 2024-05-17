@@ -10,7 +10,7 @@ a {
 body {
     display: flex;
     background: url('../images/background/body.jpg') no-repeat fixed center;
-    background-size: 100vw 100vh;
+    background-size: 100% 100vh;
 }
 
 .body {
@@ -27,6 +27,51 @@ body {
 
 }
 
+#nav {
+    position: relative;
+    border: none;
+    border-radius: 10em;
+    display: flex;
+    list-style: none;
+    background: #f5f5f5;
+    box-shadow: 20px 40px 40px #00000033;
+    padding: 10px;
+    margin: 10px auto;
+
+}
+
+#nav li a {
+    position: relative;
+    padding: 15px 50px;
+    font: 500 24px "微软雅黑";
+    border: none;
+    outline: none;
+    color: rgb(70, 100, 100);
+    display: inline-block;
+    text-decoration: none;
+    z-index: 4;
+}
+.slide1,
+.slide2 {
+    position: absolute;
+    display: inline-block;
+    height: 60px;
+    border-radius: 10em;
+    transition: all 0.6s cubic-bezier(0.23,1,0.32,1.05);
+}
+.slide1 {
+    background-color: rgb(170,190,255);
+    z-index: 3;
+}
+.slide2 {
+    opacity: 0;
+    background-color: rgba(170,190,255,.5);
+    z-index: 2;
+    box-shadow: 0 0 20px #ffffffaa inset;
+}
+.squeeze {
+    transform: scale(0.9);
+}
 .router {
     width: 90%;
     /* height: 15%; */

@@ -9,14 +9,23 @@
 </head>
 
 <body>
-    <div class="body">
-        <div class="router">
-            <div class="home nav"> <a href="#">首页</a></div>
-            <div class="read nav"><a href="/pages/night_read.html">夜读</a> </div>
-        </div>
-
-    </div>
+    <ul id="nav">
+        <li class="slide1"></li>
+        <li class="slide2"></li>
+        <li><a href="../index.html">首页</a></li>
+        <li><a href="./pages/night_read.html">夜读</a></li>
+        <li><a href="#">样式案例</a></li>
+        <!-- <li><a href="#"></a></li> -->
+        <!-- <li><a href="#"></a></li> -->
+    </ul>
 
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="./js/read.js"></script>
+<script>
+    var currentWidth = $("#nav li:nth-of-type(3) a").parent("li").width();
+    var current = $("li:nth-of-type(3) a").position();
+    $("#nav .slide1").css({left:+current.left,width:currentWidth});
+</script>
 
 </html>
